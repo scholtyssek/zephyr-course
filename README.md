@@ -13,3 +13,18 @@ Follow the following guide:
 
 Make sure to select appropriate OS and to perform all steps till
 [Build the Blinky Sample](https://docs.zephyrproject.org/latest/develop/getting_started/index.html#build-the-blinky-sample).
+
+
+
+# Build 
+
+`
+## Kconfig syntax
+west build -p always -b nucleo_l476rg app -- -DCONFIG_BLINK_SLEEP_TIME_MS=100
+west build -p always -b nucleo_l476rg app -- -DCONFIG_BLINK_SLEEP_TIME_MS=500
+west build -p always -b nucleo_l476rg app
+
+west build -t menuconfig -b nucleo_l476rg app
+
+west flash
+`
